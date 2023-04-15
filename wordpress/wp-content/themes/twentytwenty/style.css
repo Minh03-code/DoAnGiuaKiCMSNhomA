@@ -6568,3 +6568,84 @@ a.to-the-top > * {
 	font-weight: 100;
 }
 /* End css of the content custom */
+
+/* Start css of the detail */
+.mg-top{
+	margin-top: 100px;
+}
+
+.ditail-bg {
+	background: url(http://fit.tdc.edu.vn/addons/default/themes/bootstrapThree/img/bg_pattern.png) repeat;
+	font-family: 'Open Sans', sans-serif;
+	padding: 0 50px;
+}
+
+.detail .title {
+	border: none;
+	margin-top: 45px;
+}
+.detail .title .entry-title{
+	line-height: 80px;
+}
+.detail .title h4 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2.1em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.detail .title .headlinesdate {
+	background: #f5ce31;
+	border-radius: 50%;
+	padding: 10px 10px;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.headlinesdate .headlinesdm,
+.news>.headlines .headlinesdate,
+.headlinesdate {
+	float: left;
+	font-family: 'Prata', serif;
+}
+
+.headlinesdate .headlinesdm,
+.news>.headlines .headlinesdate,
+.headlinesdate {
+	float: left;
+	font-family: 'Prata', serif;
+}
+
+.list_news .headlines .headlinesday,
+.detail .headlinesdate .headlinesday {
+	border-bottom: 1px solid #000;
+}
+
+.headlinesdate .headlinesday {
+	border-bottom: 1px solid #fff;
+}
+
+.headlinesdate .headlinesday,
+.news>.headlines .headlinesmonth {
+	line-height: 1.7em;
+}
+
+.headlinesdate .headlinesyear {
+	line-height: 3.5em;
+	float: left;
+	margin-left: 3px;
+}
+
+.detail .overviewline {
+	border-bottom: 1px solid #cecece;
+	margin: 25px 0 15px;
+	position: relative;
+}
+
+.detail .maincontent {
+	text-align: justify;
+	line-height: 1.7em;
+	padding: 0 0 50px 0;
+}
+/* Start css of the detail */
