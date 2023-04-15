@@ -1,5 +1,6 @@
 <?php
 /**
+ * This is a title in content
  * Displays the post header
  *
  * @package WordPress
@@ -40,16 +41,18 @@ if ( is_singular() ) {
 					?>
 				</span>
 				<div class="entry-categories-inner">
-					<?php the_category( ' ' ); ?>
+					<!-- <?php  the_category( ' ' ); ?> -->
 				</div><!-- .entry-categories-inner -->
 			</div><!-- .entry-categories -->
 
 			<?php
 		}
 
+
 		if ( is_singular() ) {
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		} else {
+			// this is a title in content
 			the_title( '<h2 class="entry-title heading-size-1"><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' );
 		}
 
@@ -60,7 +63,7 @@ if ( is_singular() ) {
 		} else {
 			$intro_text_width = ' thin';
 		}
-
+		
 		if ( has_excerpt() && is_singular() ) {
 			?>
 
@@ -70,7 +73,7 @@ if ( is_singular() ) {
 
 			<?php
 		}
-
+		
 		// Default to displaying the post meta.
 		twentytwenty_the_post_meta( get_the_ID(), 'single-top' );
 		?>

@@ -1,3 +1,6 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
 <?php
 /**
  * The main template file
@@ -81,17 +84,20 @@ get_header();
 
 	if ( have_posts() ) {
 
+		
 		$i = 0;
 
 		while ( have_posts() ) {
 			$i++;
-			if ( $i > 1 ) {
-				echo '<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true" />';
-			}
+
+			// This is the line bottom of the post
+			// if ( $i > 1 ) {
+			// 	echo '<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true" />';
+			// }
 			the_post();
 
 			get_template_part( 'template-parts/content', get_post_type() );
-
+			
 		}
 	} elseif ( is_search() ) {
 		?>
