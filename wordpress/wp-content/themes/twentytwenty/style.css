@@ -1007,6 +1007,9 @@ section {
 .section-inner.thin {
 	max-width: 58rem;
 }
+.section-inner.thing {
+	max-width: 70rem;
+}
 
 .section-inner.small {
 	max-width: 80rem;
@@ -6509,4 +6512,29 @@ a.to-the-top > * {
 	.wp-block-pullquote.is-style-solid-color.alignright::before {
 		top: 0;
 	}
+}
+.go_search{
+text-align: center;
+background: #fff;
+padding: 10px 10px;
+
+}
+.cot{
+display: inline-block;
+}
+.btn-kiem{
+	background: #28a745;
+	text-transform: capitalize;
+	font-weight: normal;
+	color: #fff;
+	border-radius: 5%;
+	padding: 10px 10px;
+}
+.btn-kiem:hover{
+	text-decoration: none;
+	background:#25973f;
+}
+#s{
+	width: 530px;
+	border: #fff;
 }
