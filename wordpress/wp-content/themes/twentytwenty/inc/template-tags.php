@@ -41,9 +41,9 @@ function twentytwenty_site_logo( $args = array(), $display = true ) {
 		'logo'        => '%1$s<span class="screen-reader-text">%2$s</span>',
 		'logo_class'  => 'site-logo',
 		'title'       => '<a href="%1$s">%2$s</a>',
-		'title_class' => 'site-title',
-		'home_wrap'   => '<h1 class="%1$s">%2$s</h1>',
-		'single_wrap' => '<div class="%1$s faux-heading">%2$s</div>',
+		'title_class' => 'navbar-brand',
+		'home_wrap'   => '<span class="%1$s">%2$s</span>',
+		'single_wrap' => '<div class="%1$s ">%2$s</div>',
 		'condition'   => ( is_front_page() || is_home() ) && ! is_page(),
 	);
 

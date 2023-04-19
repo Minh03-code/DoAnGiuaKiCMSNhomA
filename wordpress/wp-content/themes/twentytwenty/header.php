@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Header file for the Twenty Twenty WordPress default theme.
  *
@@ -9,179 +10,131 @@
  * @since Twenty Twenty 1.0
  */
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 
 <html class="no-js" <?php language_attributes(); ?>>
 
-	<head>
+<head>
 
-		<meta charset="<?php bloginfo( 'charset' ); ?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<meta charset="<?php bloginfo('charset'); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-		<?php wp_head(); ?>
+	<?php wp_head(); ?>
 
-	</head>
+</head>
 
-	<body <?php body_class(); ?>>
+<body <?php body_class(); ?>>
 
+	<?php
+	wp_body_open();
+	?>
+
+	<header id="site-header" class="header-footer-group">
 		<?php
-		wp_body_open();
+
+		// Check whether the header search is activated in the customizer.
+		$enable_header_search = get_theme_mod('enable_header_search', true);
+
 		?>
 
-		<header id="site-header" class="header-footer-group">
 
-			<div class="header-inner section-inner">
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<!------ Include the above in your HEAD tag ---------->
 
-				<div class="header-titles-wrapper">
-
+		<nav class="navbar navbar-icon-top navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- <a class="navbar-brand" href="#"> -->
+					<!-- </a> -->
 					<?php
 
-					// Check whether the header search is activated in the customizer.
-					$enable_header_search = get_theme_mod( 'enable_header_search', true );
+					// Site title or logo.
+					twentytwenty_site_logo();
 
-					if ( true === $enable_header_search ) {
+					// Site description.
+					// twentytwenty_site_description();
 
-						?>
+					// the_custom_logo();
 
-						<button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
-							<span class="toggle-inner">
-								<span class="toggle-icon">
-									<?php twentytwenty_the_theme_svg( 'search' ); ?>
-								</span>
-								<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'twentytwenty' ); ?></span>
-							</span>
-						</button><!-- .search-toggle -->
-
-					<?php } ?>
-
-					<div class="header-titles">
-
-						<?php
-							// Site title or logo.
-							twentytwenty_site_logo();
-
-							// Site description.
-							twentytwenty_site_description();
-						?>
-
-					</div><!-- .header-titles -->
-
-					<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
-						<span class="toggle-inner">
-							<span class="toggle-icon">
-								<?php twentytwenty_the_theme_svg( 'ellipsis' ); ?>
-							</span>
-							<span class="toggle-text"><?php _e( 'Menu', 'twentytwenty' ); ?></span>
-						</span>
-					</button><!-- .nav-toggle -->
-
-				</div><!-- .header-titles-wrapper -->
-
-				<div class="header-navigation-wrapper">
-
-					<?php
-					if ( has_nav_menu( 'primary' ) || ! has_nav_menu( 'expanded' ) ) {
-						?>
-
-							<nav class="primary-menu-wrapper" aria-label="<?php echo esc_attr_x( 'Horizontal', 'menu', 'twentytwenty' ); ?>">
-
-								<ul class="primary-menu reset-list-style">
-
-								<?php
-								if ( has_nav_menu( 'primary' ) ) {
-
-									wp_nav_menu(
-										array(
-											'container'  => '',
-											'items_wrap' => '%3$s',
-											'theme_location' => 'primary',
-										)
-									);
-
-								} elseif ( ! has_nav_menu( 'expanded' ) ) {
-
-									wp_list_pages(
-										array(
-											'match_menu_classes' => true,
-											'show_sub_menu_icons' => true,
-											'title_li' => false,
-											'walker'   => new TwentyTwenty_Walker_Page(),
-										)
-									);
-
-								}
-								?>
-
-								</ul>
-
-							</nav><!-- .primary-menu-wrapper -->
-
-						<?php
-					}
-
-					if ( true === $enable_header_search || has_nav_menu( 'expanded' ) ) {
-						?>
-
-						<div class="header-toggles hide-no-js">
-
-						<?php
-						if ( has_nav_menu( 'expanded' ) ) {
-							?>
-
-							<div class="toggle-wrapper nav-toggle-wrapper has-expanded-menu">
-
-								<button class="toggle nav-toggle desktop-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
-									<span class="toggle-inner">
-										<span class="toggle-text"><?php _e( 'Menu', 'twentytwenty' ); ?></span>
-										<span class="toggle-icon">
-											<?php twentytwenty_the_theme_svg( 'ellipsis' ); ?>
-										</span>
-									</span>
-								</button><!-- .nav-toggle -->
-
-							</div><!-- .nav-toggle-wrapper -->
-
-							<?php
-						}
-
-						if ( true === $enable_header_search ) {
-							?>
-
-							<div class="toggle-wrapper search-toggle-wrapper">
-
-								<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
-									<span class="toggle-inner">
-										<?php twentytwenty_the_theme_svg( 'search' ); ?>
-										<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'twentytwenty' ); ?></span>
-									</span>
-								</button><!-- .search-toggle -->
-
-							</div>
-
-							<?php
-						}
-						?>
-
-						</div><!-- .header-toggles -->
-						<?php
-					}
 					?>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
 
-				</div><!-- .header-navigation-wrapper -->
 
-			</div><!-- .header-inner -->
+					</ul>
+					<form action="http://wordpress.local/" class="navbar-form navbar-left">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search" name="s">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
 
-			<?php
-			// Output the search modal (if it is activated in the customizer).
-			if ( true === $enable_header_search ) {
-				get_template_part( 'template-parts/modal-search' );
-			}
-			?>
+						<li>
+						<div class="toggle-wrapper search-toggle-wrapper">
 
-		</header><!-- #site-header -->
+<!-- This is btn search -->
+<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal"
+	data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field"
+	aria-expanded="false">
+	<span class="toggle-inner">
+		<?php twentytwenty_the_theme_svg( 'search' ); ?>
+		<span class="toggle-text">
+			<?php _ex( 'Search', 'toggle text', 'twentytwenty' ); ?>
+		</span>
+	</span>
+</button><!-- .search-toggle -->
+
+</div>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-envelope-o">
+									<span class="badge badge-danger">11</span>
+								</i>
+								Messages
+							</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-user-circle-o"></i>
+								Account <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
 
 		<?php
-		// Output the menu modal.
-		get_template_part( 'template-parts/modal-menu' );
+		// Output the search modal (if it is activated in the customizer).
+			get_template_part('template-parts/modal-search');
+		?>
+
+	</header><!-- #site-header -->
+
+	<?php
+	// Output the menu modal.
+	get_template_part('template-parts/modal-menu');
