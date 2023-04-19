@@ -85,29 +85,21 @@
 					</form>
 					<ul class="nav navbar-nav navbar-right">
 
-						<li>
-						<div class="toggle-wrapper search-toggle-wrapper">
 
-<!-- This is btn search -->
-<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal"
-	data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field"
-	aria-expanded="false">
-	<span class="toggle-inner">
-		<?php twentytwenty_the_theme_svg( 'search' ); ?>
-		<span class="toggle-text">
-			<?php _ex( 'Search', 'toggle text', 'twentytwenty' ); ?>
-		</span>
-	</span>
-</button><!-- .search-toggle -->
-
-</div>
-						</li>
 						<li>
 							<a href="#">
-								<i class="fa fa-envelope-o">
-									<span class="badge badge-danger">11</span>
-								</i>
-								Messages
+								<div class="toggle-wrapper search-toggle-wrapper">
+									<!-- This is btn search -->
+									<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
+										<span class="toggle-inner">
+											<?php twentytwenty_the_theme_svg('search'); ?>
+											<span class="toggle-text">
+												<?php _ex('Search', 'toggle text', 'twentytwenty'); ?>
+											</span>
+										</span>
+									</button><!-- .search-toggle -->
+
+								</div>
 							</a>
 						</li>
 						<li class="dropdown">
@@ -130,7 +122,7 @@
 
 		<?php
 		// Output the search modal (if it is activated in the customizer).
-			get_template_part('template-parts/modal-search');
+		get_template_part('template-parts/modal-search');
 		?>
 
 	</header><!-- #site-header -->
