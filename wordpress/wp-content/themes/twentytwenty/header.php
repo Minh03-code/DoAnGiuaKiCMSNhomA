@@ -19,9 +19,8 @@
 
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<?php wp_head(); ?>
 
 </head>
@@ -44,6 +43,9 @@
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<!------ Include the above in your HEAD tag ---------->
 
 		<nav class="navbar navbar-icon-top navbar-default">
@@ -84,14 +86,27 @@
 						<button type="submit" class="btn btn-default">Submit</button>
 					</form>
 					<ul class="nav navbar-nav navbar-right">
+						<?php
+						$args = array(
+							'type'      => 'post',
+							'number'    => 10,
+							'parent'    => 0
+						);
+						$categories = get_categories($args);
+						foreach ($categories as $category) { ?>
+							<li><a href="#" style="font-size: 1.5rem;">
+									<?php echo $category->name; ?>
+								</a></li>
+						<?php } ?>
+
 
 
 						<li>
-							<a href="#">
+							<a href="#" class="center-text">
 								<div class="toggle-wrapper search-toggle-wrapper">
 									<!-- This is btn search -->
-									<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
-										<span class="toggle-inner">
+									<button class="toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
+										<span class="toggle-inner tranY">
 											<?php twentytwenty_the_theme_svg('search'); ?>
 											<span class="toggle-text">
 												<?php _ex('Search', 'toggle text', 'twentytwenty'); ?>
@@ -104,19 +119,19 @@
 						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-								<i class="fa fa-user-circle-o"></i>
+								<i class="fa fa-user-circle-o" aria-hidden="true"></i>
 								Account <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li role="separator" class="divider"></li>
-								<li><a href="#">Separated link</a></li>
+								<li><a href="http://wordpress.local/admin/">Login</a></li>
+								<li><a href="<?php wp_logout_url(); ?>">Loguot</a></li>
 							</ul>
 						</li>
+						
 					</ul>
+				
 				</div><!-- /.navbar-collapse -->
+				
 			</div><!-- /.container-fluid -->
 		</nav>
 

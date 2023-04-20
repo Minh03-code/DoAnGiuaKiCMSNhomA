@@ -5812,12 +5812,17 @@ a.to-the-top > * {
 	.toggle-inner {
 		position: static;
 	}
-
+	.tranY{
+		transform: translateY(-13%);
+	}
 	.toggle-inner .toggle-text {
+		font-size: 1.3rem;
+		font-weight: 100;
 		left: 0;
 		right: 0;
 		text-align: center;
 		top: calc(100% - 0.3rem);
+		transform: translateX(-45%);
 		width: auto;
 	}
 
@@ -6561,7 +6566,9 @@ a.to-the-top > * {
 .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
     top: -16px;
 }
-
+/* .bg-search{
+	background: rgba(255, 255, 255, 0);
+} */
 @media (min-width: 768px) {
     .navbar-icon-top .navbar-brand {
         padding: 25px 15px;
