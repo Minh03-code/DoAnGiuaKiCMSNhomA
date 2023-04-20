@@ -45,7 +45,7 @@
 							<div class="thang">Tháng <?php echo get_the_date('m', $post->ID); ?></div>
 						</div>
 						<div class="cot result3">
-							<div class="result31"><?php the_title( '<a class="theNd" href="' . esc_url( get_permalink() ) . '">', '</a>' ); ?></div>
+							<div class="result31"><?php the_title('<a class="theNd" href="' . esc_url(get_permalink()) . '">', '</a>'); ?></div>
 							<div class="result32"><?php the_excerpt(); ?></div>
 						</div>
 					</div>
