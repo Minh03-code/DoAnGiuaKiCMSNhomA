@@ -6551,6 +6551,7 @@ a.to-the-top > * {
 .result32{
 	font-size: 0.7em;
 	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
 }
 .ngay
 {
@@ -6559,4 +6560,9 @@ a.to-the-top > * {
 .thang{
 	font-size:0.9em;
 	
+}
+.theNd{
+	text-decoration:none; 
+	color:#428bca;
+	font-family: Arial, Helvetica, sans-serif;
 }
