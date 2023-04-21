@@ -31,10 +31,9 @@ if ($next_post || $prev_post) {
 
 			<?php
 			//lấy thời gian bài post về
-			$prev_post_new_post_date = $prev_post->post_date;
-			$next_post_new_post_date = $next_post->post_date;
 			if ($prev_post) {
-				$prev_date = explode("/",date('d/m/y', strtotime($prev_post_new_post_date)));
+				$prev_post_new_post_date = $prev_post->post_date;
+				$prev_date = explode("/", date('d/m/y', strtotime($prev_post_new_post_date)));
 				$day = $prev_date[0];
 				$month = $prev_date[1];
 				$year = $prev_date[2];
@@ -49,18 +48,19 @@ if ($next_post || $prev_post) {
 						</div>
 						<div class="headlinesyear"><?php echo $year; ?></div>
 					</div>
-
 					<div class="headlinestitle">
 						<a href="<?php echo esc_url(get_permalink($prev_post->ID)); ?>">
 							<?php echo wp_kses_post(get_the_title($prev_post->ID)); ?>
 						</a>
 					</div>
 				</div>
-			<?php
+				<?php
 			}
 			?>
+
 			<?php
 			if ($next_post) {
+				$next_post_new_post_date = $next_post->post_date;
 				$next_date = explode("/", date('d/m/y', strtotime($next_post_new_post_date)));
 				$day = $next_date[0];
 				$month = $next_date[1];
