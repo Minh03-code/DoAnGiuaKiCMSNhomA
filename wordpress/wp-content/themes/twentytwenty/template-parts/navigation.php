@@ -22,7 +22,7 @@ if ($next_post || $prev_post) {
 	}
 
 ?>
-
+<!-- Code (7) Prev - Next Post -->
 	<nav class="pagination-single section-inner<?php echo esc_attr($pagination_classes); ?>" aria-label="<?php esc_attr_e('Post', 'twentytwenty'); ?>" role="navigation">
 
 		<hr class="styled-separator is-style-wide" aria-hidden="true" />
@@ -59,6 +59,7 @@ if ($next_post || $prev_post) {
 			?>
 
 			<?php
+			//lấy thời gian bài post về
 			if ($next_post) {
 				$next_post_new_post_date = $next_post->post_date;
 				$next_date = explode("/", date('d/m/y', strtotime($next_post_new_post_date)));
@@ -66,6 +67,7 @@ if ($next_post || $prev_post) {
 				$month = $next_date[1];
 				$year = $next_date[2];
 			?>
+			<!-- Bài viết sau -->
 				<div class="another__post">
 					<div class="headlinesdate">
 						<div class="headlinesdm">
