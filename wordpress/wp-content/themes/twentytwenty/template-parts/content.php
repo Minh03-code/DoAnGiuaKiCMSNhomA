@@ -127,7 +127,7 @@
 				<div class="widget topworks_itdc">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h3>Recent Post</h3>
+							<h3>Recent posts</h3>
 						</div>
 						<div class="crossedbg"></div>
 						<div class="panel-body">
