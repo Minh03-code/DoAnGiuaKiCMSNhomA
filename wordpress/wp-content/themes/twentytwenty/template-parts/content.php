@@ -180,9 +180,24 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
-				This is module 10 (recent post)
+			<!-- Start hiển thị module 10 (Recent posts) -->
+			<div class="col-md-3 bg">
+				<div class="widget topworks_itdc">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3>Recent posts</h3>
+						</div>
+						<div class="crossedbg"></div>
+						<div class="panel-body">
+							<ul class="list-group">
+								<?php dynamic_sidebar('sidebar-10') ?>
+							</ul>
+						</div>
+					</div>
+					<div class="divider"></div>
+				</div>
 			</div>
+			<!-- End hiển thị module 10 (Recent posts) -->
 		</div>
 		<!-- .post-inner -->
 	<?php } 
