@@ -64,9 +64,10 @@
 
 	<?php
 	// Nếu đây không phải trang home sẽ đi vào trong đây
-	if (!is_home()) {
+	if (!is_home() && !is_search()) {
 	?>
 		<div class="row mg-top">
+		    <!--Start Hiển thị module 9 -->
 			<div class="col-md-3 detail_bg">
 				<div class="widget topworks_itdc">
 					<div class="panel panel-default">
@@ -83,6 +84,7 @@
 					<div class="divider"></div>
 				</div>
 			</div>
+			<!-- End -->
 			<div class="col-md-6 ditail-bg">
 				<div class="detail">
 					<div class="row title">
@@ -136,7 +138,6 @@
 				</div>
 			</div>
 			<div class="col-md-3 bg">
-				
 			</div>
 		</div>
 		<!-- .post-inner -->
