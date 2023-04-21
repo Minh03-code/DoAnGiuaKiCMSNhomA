@@ -37,7 +37,6 @@ if ($next_post || $prev_post) {
 				$day = $prev_date[0];
 				$month = $prev_date[1];
 				$year = $prev_date[2];
-
 			?>
 				<!-- Bài viết trước -->
 				<div class="another__post">
