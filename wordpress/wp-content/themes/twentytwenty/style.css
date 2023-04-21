@@ -5824,6 +5824,7 @@ a.to-the-top > * {
 		top: calc(100% - 0.3rem);
 		transform: translateX(-45%);
 		width: auto;
+		font-weight: 400;
 	}
 
 	.header-toggles:only-child .nav-toggle .toggle-inner {
@@ -6519,6 +6520,7 @@ a.to-the-top > * {
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 .navbar-brand a{
 	color: #777;
+	text-decoration: none;
 }
 .navbar-brand a:hover{
 	text-decoration: none;
@@ -6588,6 +6590,7 @@ a.to-the-top > * {
         vertical-align: middle;
         padding-top: 0;
         padding-bottom: 0;
+		text-decoration: none;
     }
     .navbar-icon-top .navbar-nav>li>a>.fa, .navbar-icon-top .navbar-nav>li>a>.glyphicon {
         display: block;
