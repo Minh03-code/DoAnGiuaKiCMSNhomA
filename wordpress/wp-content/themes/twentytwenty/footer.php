@@ -13,11 +13,15 @@
  */
 
 ?>
+<!-- Link is Footer Mouule3 -->
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<!-- Footer Moudule3 -->
+
+<!-- Start -->
 <section id="footer">
 	<div class="container">
 		<div class="row text-center text-xs-center text-sm-left text-md-left">
@@ -58,6 +62,7 @@
 		</div>
 	</div>
 </section>
+<!-- End -->
 
 </body>
 

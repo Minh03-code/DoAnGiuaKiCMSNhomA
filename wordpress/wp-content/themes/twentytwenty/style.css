@@ -6471,7 +6471,8 @@ a.to-the-top > * {
 
 }
 
-/* Footer */
+/* Footer Moudule3 */
+/* Start Css */
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 section {
     padding: 60px 0;
@@ -6558,8 +6559,6 @@ h6 .ts{
 	color: #fff;
 }
 
-
-
 .wp-block-categories>li>a{
 	font-weight: normal;
 	font-family: 'Open Sans', sans-serif;
@@ -6593,7 +6592,7 @@ h6 .ts{
 }
 }
 
-
+/* End Css */
 
 @media ( min-width: 1330px ) {
 
