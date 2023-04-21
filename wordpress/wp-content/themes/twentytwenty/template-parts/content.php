@@ -62,6 +62,7 @@
 
 	<?php
 	// Nếu đây không phải trang home và không phải trang tìm kiếm sẽ đi vào trong đây
+	// Start module 6 detail
 	if (!is_home() && !is_search()) {
 	?>
 
@@ -128,7 +129,9 @@
 			</div>
 		</div>
 		<!-- .post-inner -->
-	<?php } ?>
+	<?php } 
+	// End module 6 detail
+	?>
 	<div class="section-inner">
 		<?php
 		wp_link_pages(
