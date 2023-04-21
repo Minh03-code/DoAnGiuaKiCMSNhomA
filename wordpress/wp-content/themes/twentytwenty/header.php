@@ -16,16 +16,19 @@
 <html class="no-js" <?php language_attributes(); ?>>
 
 <head>
+	<!-- Link is WordPress -->
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 
 	<!-- Link is Header Moudel 1 -->
-	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	
-
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -34,22 +37,14 @@
 	wp_body_open();
 	?>
 
+	<!-- Header Moudle 1 -->
+	<!-- Start -->
 	<header id="site-header" class="header-footer-group">
-		<?php
 
+		<?php
 		// Check whether the header search is activated in the customizer.
 		$enable_header_search = get_theme_mod('enable_header_search', true);
-
 		?>
-
-
-
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-		<!------ Include the above in your HEAD tag ---------->
 
 		<nav class="navbar navbar-icon-top navbar-default">
 			<div class="container-fluid">
@@ -68,19 +63,12 @@
 					// Site title or logo.
 					twentytwenty_site_logo();
 
-					// Site description.
-					// twentytwenty_site_description();
-
-					// the_custom_logo();
-
 					?>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-
-
 					</ul>
 					<form action="http://wordpress.local/" class="navbar-form navbar-left">
 						<div class="form-group">
@@ -101,9 +89,6 @@
 									<?php echo $category->name; ?>
 								</a></li>
 						<?php } ?>
-
-
-
 						<li>
 							<a href="#" class="center-text">
 								<div class="toggle-wrapper search-toggle-wrapper">
@@ -132,18 +117,15 @@
 						</li>
 
 					</ul>
-
 				</div><!-- /.navbar-collapse -->
-
 			</div><!-- /.container-fluid -->
 		</nav>
-
 		<?php
 		// Output the search modal (if it is activated in the customizer).
 		get_template_part('template-parts/modal-search');
 		?>
-
 	</header><!-- #site-header -->
+	<!-- End -->
 
 	<?php
 	// Output the menu modal.

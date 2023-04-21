@@ -6516,7 +6516,8 @@ a.to-the-top > * {
 		top: 0;
 	}
 }
-/* Start css by header */
+/*Css is Header module 1 */
+/* Start */
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 .navbar-brand a{
 	color: #777;
@@ -6568,9 +6569,6 @@ a.to-the-top > * {
 .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
     top: -16px;
 }
-/* .bg-search{
-	background: rgba(255, 255, 255, 0);
-} */
 @media (min-width: 768px) {
     .navbar-icon-top .navbar-brand {
         padding: 25px 15px;
