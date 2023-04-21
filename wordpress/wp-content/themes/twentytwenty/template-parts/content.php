@@ -19,36 +19,38 @@
 	<?php
 	// get_template_part( 'template-parts/entry-header' );
 	?>
+
 <?php
 // Nếu đây là trang home sẽ đi vào trong đây
 // Start module 2 post
  if (is_home()) {
 	?>
-	<div class="container">
-		<div class="content_box_m">
-			<div class="row">
-				<div class="col-md-3 col-xs-3 topnewstime">
-					<span class="topnewsdate"><?php echo get_the_date('d', get_the_ID()); ?></span><br>
-					<span class="topnewsmonth">Tháng <?php echo get_the_date('m', get_the_ID()); ?></span><br>
-				</div>
-				<div class="col-md-9 col-xs-9 shortdesc">
-					<?php
-					if (is_singular()) {
-						the_title('<h1 class="entry-title">', '</h1>');
-					} else {
-						// this is a title in content
-						the_title('<h4><a href="' . esc_url(get_permalink()) . '">', '</a></h4>');
-					}
-					?>
-					<p class="p">
+		<div class="container">
+			<div class="content_box_m">
+				<div class="row">
+					<div class="col-md-3 col-xs-3 topnewstime">
+						<span class="topnewsdate"><?php echo get_the_date('d', get_the_ID()); ?></span><br>
+						<span class="topnewsmonth">Tháng <?php echo get_the_date('m', get_the_ID()); ?></span><br>
+					</div>
+					<div class="col-md-9 col-xs-9 shortdesc">
 						<?php
-						the_content(__('Continue reading', 'twentytwenty'));
-						// edit_post_link();
+						if (is_singular()) {
+							the_title('<h1 class="entry-title">', '</h1>');
+						} else {
+							// this is a title in content
+							the_title('<h4><a href="' . esc_url(get_permalink()) . '">', '</a></h4>');
+						}
 						?>
-					</p>
+						<p class="p">
+							<?php
+							the_content(__('Continue reading', 'twentytwenty'));
+							// edit_post_link();
+							?>
+						</p>
+					</div>
+
+
 				</div>
-
-
 			</div>
 		</div>
 	</div>
@@ -63,31 +65,78 @@
 
 	?>
 
-<?php
-// Nếu đây không phải trang home sẽ đi vào trong đây
- if (!is_home()) {
+	<?php
+	// Nếu đây không phải trang home và không phải trang tìm kiếm sẽ đi vào trong đây
+	// Start module 6 detail
+	if (!is_home() && !is_search()) {
 	?>
 
+		<div class="row mg-top">
+			<div class="col-md-3">
+				This is module 9 (Show category)
+			</div>
+			<div class="col-md-6 ditail-bg">
+				<div class="detail">
+					<div class="row title">
+						<div class="col-md-10 col-xs-9">
+							<?php
+							if (is_singular()) {
+								the_title('<h4 class="entry-title">', '</h4>');
+							} else {
+								// this is a title in content
+								the_title('<h4><a href="' . esc_url(get_permalink()) . '">', '</a></h4>');
+							}
+							?>
+						</div>
+						<div class="col-md-2 col-xs-3">
+							<div class="headlinesdate">
+								<div class="headlinesdm">
+									<div class="headlinesday"><?php echo get_the_date('d', get_the_ID()); ?></div>
+									<div class="headlinesmonth"><?php echo get_the_date('m', get_the_ID()); ?></div>
+								</div>
+								<div class="headlinesyear">'<?php echo get_the_date('y', get_the_ID()); ?></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="overviewline"></div>
+						</div>
+					</div>
+					<div class="row overview">
+						<div class="col-md-12">
+							<?php
+							if (is_singular()) {
+								the_title('<p class="entry-title">', '</p>');
+							} else {
+								// this is a title in content
+								the_title('<p><a href="' . esc_url(get_permalink()) . '">', '</a></p>');
+							}
+							?>
 
-	<div class="post-inner <?php echo is_page_template('templates/template-full-width.php') ? '' : 'thin'; ?> ">
+						</div>
+					</div>
+					<div class="row maincontent">
+						<div class="col-md-12">
+							<p>
+								<?php
+								the_content(__('Continue reading', 'twentytwenty'));
+								// edit_post_link();
+								?>
+							</p>
 
-		<div class="entry-content">
-
-			<?php
-			if (is_singular()) {
-				the_title('<h1 class="entry-title">', '</h1>');
-			} else {
-				// this is a title in content
-				the_title('<h4><a href="' . esc_url(get_permalink()) . '">', '</a></h4>');
-			}
-			?>
-
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				This is module 10 (recent post)
+			</div>
 		</div>
-		<!-- .entry-content -->
-
-	</div>
-	<!-- .post-inner -->
-<?php } ?>
+		<!-- .post-inner -->
+	<?php } 
+	// End module 6 detail
+	?>
 	<div class="section-inner">
 		<?php
 		wp_link_pages(
