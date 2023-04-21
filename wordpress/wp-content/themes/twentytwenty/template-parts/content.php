@@ -27,14 +27,15 @@
 	}
 
 	?>
-<?php
-			if (is_search() || !is_singular() && 'summary' === get_theme_mod('blog_content', 'full')) {
-			?>
-	<div class="post-inner <?php echo is_page_template('templates/template-full-width.php') ? '' : 'thin'; ?> ">
+	<!-- Start search result  -->
+	<?php
+	if (is_search() || !is_singular() && 'summary' === get_theme_mod('blog_content', 'full')) {
+	?>
+		<div class="post-inner <?php echo is_page_template('templates/template-full-width.php') ? '' : 'thin'; ?> ">
 
-		<div class="entry-content">
+			<div class="entry-content">
 
-			
+
 				<!-- Sua Noi Dung -->
 
 				<div class="boxresult">
@@ -52,18 +53,19 @@
 
 				</div>
 				<!-- Su Noi Dung -->
-			
 
-		</div><!-- .entry-content -->
 
-	</div><!-- .post-inner -->
+			</div><!-- .entry-content -->
+
+		</div><!-- .post-inner -->
 	<?php
-			} else {
+	} else {
 
-				the_content(__('Continue reading', 'twentytwenty'));
-			}
+		the_content(__('Continue reading', 'twentytwenty'));
+	}
 
-			?>
+	?>
+	<!-- End search result  -->
 	<div class="section-inner">
 		<?php
 		wp_link_pages(
