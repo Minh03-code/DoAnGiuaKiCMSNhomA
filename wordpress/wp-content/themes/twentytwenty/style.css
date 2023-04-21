@@ -6510,6 +6510,7 @@ a.to-the-top > * {
 		top: 0;
 	}
 }
+/* Css của result Search */
 .boxresult{
 	display: flex;
 	background: #fff;
@@ -6576,3 +6577,4 @@ a.to-the-top > * {
 	color:#428bca;
 	font-family: Arial, Helvetica, sans-serif;
 }
+/* Css của result Search */
