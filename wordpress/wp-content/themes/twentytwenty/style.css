@@ -6512,7 +6512,7 @@ a.to-the-top > * {
 }
 
 
-/* Code Css (7) Prev - Next Post */
+/* Start Code Css (7) Prev - Next Post */
 @media (min-width: 700px) {
     .pagination-single-inner {
         all: unset;
@@ -6576,4 +6576,4 @@ a.to-the-top > * {
 #another__post-wrapper .another__post .headlinestitle a:hover {
     text-decoration: underline;
 }
-
+/* End Code Css (7) Prev - Next Post */
