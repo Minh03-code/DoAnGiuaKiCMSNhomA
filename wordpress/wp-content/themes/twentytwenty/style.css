@@ -6651,17 +6651,17 @@ a.to-the-top > * {
 /* Start css of the detail */
 
 /* Start css module 10*/
+
+/* Start css module 9 + module 10 (phần giống nhau) */
 .topworks_itdc {
 	width: 340px;
 	font-family: 'Open Sans', sans-serif;
-	
 }
 
 .panel-body {
 	background: #fff;
 	text-align: left;
 	font-family: 'Open Sans', sans-serif;
-	
 }
 
 .panel-default {
@@ -6683,12 +6683,6 @@ a.to-the-top > * {
 	margin-bottom: 10px;
 }
 
-.panel-heading h2>span {
-	font-weight: normal;
-	font-size: 1em;
-
-}
-
 .crossedbg {
 	background: url(./assets/images/bg_cr_grey.png);
 	height: 15px;
@@ -6698,6 +6692,7 @@ a.to-the-top > * {
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
+/* End css module 9 + module 10 (phần giống nhau) */
 
 .bg {
 	background: url(http://fit.tdc.edu.vn/addons/default/themes/bootstrapThree/img/bg_pattern.png) repeat;

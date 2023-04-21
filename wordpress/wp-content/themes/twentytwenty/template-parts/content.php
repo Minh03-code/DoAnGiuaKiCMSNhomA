@@ -68,7 +68,6 @@
 	?>
 		<div class="row mg-top">
 			<div class="col-md-3 detail_bg">
-				
 			</div>
 			<div class="col-md-6 ditail-bg">
 				<div class="detail">
@@ -123,6 +122,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- Start hiển thị module 10 (Recent posts) -->
 			<div class="col-md-3 bg">
 				<div class="widget topworks_itdc">
 					<div class="panel panel-default">
@@ -139,6 +139,7 @@
 					<div class="divider"></div>
 				</div>
 			</div>
+			<!-- End -->
 		</div>
 		<!-- .post-inner -->
 	<?php } ?>
