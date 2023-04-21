@@ -33,7 +33,7 @@ if ($next_post || $prev_post) {
 			//lấy thời gian bài post về
 			$prev_post_new_post_date = $prev_post->post_date;
 			$next_post_new_post_date = $next_post->post_date;
-			if ($prev_post_new_post_date != null) {
+			if ($prev_post) {
 				$prev_date = explode("/",date('d/m/y', strtotime($prev_post_new_post_date)));
 				$day = $prev_date[0];
 				$month = $prev_date[1];
@@ -57,11 +57,10 @@ if ($next_post || $prev_post) {
 					</div>
 				</div>
 			<?php
-			}else{
-				
 			}
-
-			if ($next_post_new_post_date != null) {
+			?>
+			<?php
+			if ($next_post) {
 				$next_date = explode("/", date('d/m/y', strtotime($next_post_new_post_date)));
 				$day = $next_date[0];
 				$month = $next_date[1];
