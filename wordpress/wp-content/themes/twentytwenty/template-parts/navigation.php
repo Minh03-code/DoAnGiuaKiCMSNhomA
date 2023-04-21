@@ -30,25 +30,24 @@ if ($next_post || $prev_post) {
 		<div class="pagination-single-inner" id="another__post-wrapper">
 
 			<?php
-			if ($prev_post) {
-				// lấy ngày-tháng-năm bài viết.
-				$prev_post_new_post_date = $prev_post->post_date;
-				$prev_post_time = strtotime($prev_post_new_post_date);
-				$prev_post_newformat = date('y-m-d', $prev_post_time);
-				$prev_post_expore = explode("-", $prev_post_newformat);
-				$prev_post_day = $prev_post_expore[2];
-				$prev_post_month = $prev_post_expore[1];
-				$prev_post_year = $prev_post_expore[0];
+			//lấy thời gian bài post về
+			$prev_post_new_post_date = $prev_post->post_date;
+			$next_post_new_post_date = $next_post->post_date;
+			if ($prev_post_new_post_date != null) {
+				$prev_date = explode("/",date('d/m/y', strtotime($prev_post_new_post_date)));
+				$day = $prev_date[0];
+				$month = $prev_date[1];
+				$year = $prev_date[2];
 
 			?>
 				<!-- Bài viết trước -->
 				<div class="another__post">
 					<div class="headlinesdate">
 						<div class="headlinesdm">
-							<div class="headlinesday"><?php echo $prev_post_day; ?></div>
-							<div class="headlinesmonth"><?php echo $prev_post_month; ?></div>
+							<div class="headlinesday"><?php echo $day; ?></div>
+							<div class="headlinesmonth"><?php echo $month; ?></div>
 						</div>
-						<div class="headlinesyear"><?php echo $prev_post_year; ?></div>
+						<div class="headlinesyear"><?php echo $year; ?></div>
 					</div>
 
 					<div class="headlinestitle">
@@ -62,24 +61,19 @@ if ($next_post || $prev_post) {
 				
 			}
 
-			if ($next_post) {
-				// lấy ngày-tháng-năm bài viết.
-				$next_post_new_post_date = $next_post->post_date;
-				$next_post_time = strtotime($prev_post_new_post_date);
-				$next_post_newformat = date('y-m-d', $prev_post_time);
-				$next_post_expore = explode("-", $prev_post_newformat);
-				$next_post_day = $prev_post_expore[2];
-				$next_post_month = $prev_post_expore[1];
-				$next_post_year = $prev_post_expore[0];
+			if ($next_post_new_post_date != null) {
+				$next_date = explode("/", date('d/m/y', strtotime($next_post_new_post_date)));
+				$day = $next_date[0];
+				$month = $next_date[1];
+				$year = $next_date[2];
 			?>
-				<!-- Bài viết tiếp theo -->
 				<div class="another__post">
 					<div class="headlinesdate">
 						<div class="headlinesdm">
-							<div class="headlinesday"><?php echo $next_post_day; ?></div>
-							<div class="headlinesmonth"><?php echo $next_post_month; ?></div>
+							<div class="headlinesday"><?php echo $day; ?></div>
+							<div class="headlinesmonth"><?php echo $month; ?></div>
 						</div>
-						<div class="headlinesyear"><?php echo $next_post_year; ?></div>
+						<div class="headlinesyear"><?php echo $year; ?></div>
 					</div>
 
 					<div class="headlinestitle">
