@@ -136,20 +136,7 @@
 				</div>
 			</div>
 			<div class="col-md-3 bg">
-				<div class="widget topworks_itdc">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3>Recent Post</h3>
-						</div>
-						<div class="crossedbg"></div>
-						<div class="panel-body">
-							<ul class="list-group">
-								<?php dynamic_sidebar('sidebar-10') ?>
-							</ul>
-						</div>
-					</div>
-					<div class="divider"></div>
-				</div>
+				
 			</div>
 		</div>
 		<!-- .post-inner -->
