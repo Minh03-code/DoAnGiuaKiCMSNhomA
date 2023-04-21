@@ -145,19 +145,6 @@ if (comments_open() || pings_open()) {
 										<label class="sr-only" for="comment">Comment <span class="required">*</span></label>
 										<textarea class="form-control" id="comment" name="comment" cols="45" rows="3" maxlength="65525" required="" placeholder="What are you thinking..."></textarea>
 									</div>
-									<div class="form-group">
-										<label class="sr-only" for="author">Name</label>
-										<input class="form-control" id="author" name="author" type="text" size="30" maxlength="245" autocomplete="name" required="" placeholder="Enter name">
-									</div>
-									<div class="form-group">
-										<label class="sr-only" for="email">Email</label>
-										<input class="form-control" id="email" name="email" type="email" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required="" placeholder="Enter email">
-									</div>
-									<div class="form-group">
-										<label class="sr-only" for="name">Website</label>
-										<input class="form-control" id="url" name="url" type="url" size="30" maxlength="200" autocomplete="url" placeholder="url of website">
-									</div>
-
 								</div>
 							</div>
 							<div class="text-right">
