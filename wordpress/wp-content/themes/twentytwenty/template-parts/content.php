@@ -60,12 +60,54 @@
 
 	<?php
 	if (!is_search()) {
+
+
+
+	if (!is_search()) {
 		get_template_part('template-parts/featured-image');
 	}
 
 	?>
-
+	<!-- Start search result  -->
 	<?php
+	if (is_search() || !is_singular() && 'summary' === get_theme_mod('blog_content', 'full')) {
+	?>
+		<div class="post-inner <?php echo is_page_template('templates/template-full-width.php') ? '' : 'thin'; ?> ">
+
+			<div class="entry-content">
+
+
+				<!-- Sua Noi Dung -->
+
+				<div class="boxresult">
+					<div class="cot result1"><?php echo get_the_post_thumbnail($post->ID, 'post-thumbnail', "class=img-fluid") ?></div>
+					<div class="cot result">
+						<div class="cot result2">
+							<div class="ngay"><?php echo get_the_date('d', $post->ID); ?></div>
+							<div class="thang">Tháng <?php echo get_the_date('m', $post->ID); ?></div>
+						</div>
+						<div class="cot result3">
+							<div class="result31"><?php the_title('<a class="theNd" href="' . esc_url(get_permalink()) . '">', '</a>'); ?></div>
+							<div class="result32"><?php the_excerpt(); ?></div>
+						</div>
+					</div>
+
+				</div>
+				<!-- Su Noi Dung -->
+
+
+			</div><!-- .entry-content -->
+
+		</div><!-- .post-inner -->
+	<?php
+	} else {
+
+		the_content(__('Continue reading', 'twentytwenty'));
+	}
+
+	?>
+	<!-- End search result  -->
+<?php
 	// Nếu đây không phải trang home và không phải trang tìm kiếm sẽ đi vào trong đây
 	// Start module 6 detail
 	if (!is_home() && !is_search()) {
