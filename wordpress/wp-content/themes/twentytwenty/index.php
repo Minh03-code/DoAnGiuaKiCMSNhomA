@@ -29,14 +29,14 @@ get_header();
 		 * @global WP_Query $wp_query WordPress Query object.
 		 */
 		global $wp_query;
-
+		
 		$archive_title = sprintf(
 			'%1$s %2$s',
 			'<span class="color-accent">' . __( 'Search:', 'twentytwenty' ) . '</span>',
 			'&ldquo;' . get_search_query() . '&rdquo;'
 		);
-
 		if ( $wp_query->found_posts ) {
+			
 			$archive_subtitle = sprintf(
 				/* translators: %s: Number of search results. */
 				_n(
@@ -48,9 +48,12 @@ get_header();
 				number_format_i18n( $wp_query->found_posts )
 			);
 		} else {
+		
+
 			$archive_subtitle = __( 'We could not find any results for your search. You can give it another try through the search form below.', 'twentytwenty' );
 		}
 	} elseif ( is_archive() && ! have_posts() ) {
+		
 		$archive_title = __( 'Nothing Found', 'twentytwenty' );
 	} elseif ( ! is_home() ) {
 		$archive_title    = get_the_archive_title();
@@ -97,17 +100,21 @@ get_header();
 			
 		}
 	} elseif ( is_search() ) {
+		
 		?>
-
-		<div class="no-search-results-form section-inner thin">
+		
+		<div class="no-search-results-form section-inner thing">
 
 			<?php
-			get_search_form(
-				array(
-					'aria_label' => __( 'search again', 'twentytwenty' ),
-				)
-			);
+			//Form search bar
 			?>
+			<form action="http://wordpress.local/?s=" >
+               <div class="go_search">
+                   <div class="cot col1"><i class="fa fa-search"></i></div>
+                   <div class="cot col2"><input class="form-control formS" name="s" id="s" placeholder="Search topics or keywords" type="search"></div>
+                   <div class="cot col3"><button class="btn-kiem" type="submit">Search</button></div>
+               </div>
+            </form>
 
 		</div><!-- .no-search-results -->
 
