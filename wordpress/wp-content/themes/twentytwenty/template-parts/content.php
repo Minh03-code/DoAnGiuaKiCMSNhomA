@@ -64,10 +64,10 @@
 
 	<?php
 	// Nếu đây không phải trang home sẽ đi vào trong đây
-	if (!is_home()) {
+	if (!is_home() && !is_search()) {
 	?>
 		<div class="row mg-top">
-			<div class="col-md-3">
+			<div class="col-md-3 detail_bg">
 				<div class="widget topworks_itdc">
 					<div class="panel panel-default">
 						<div class="panel-heading">
@@ -136,7 +136,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 bg">
 				<div class="widget topworks_itdc">
 					<div class="panel panel-default">
 						<div class="panel-heading">

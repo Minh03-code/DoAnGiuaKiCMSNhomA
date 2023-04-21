@@ -6649,9 +6649,10 @@ a.to-the-top > * {
 	padding: 0 0 50px 0;
 }
 /* Start css of the detail */
-    
+
+/* Start css module 9 + module 10 */
 .topworks_itdc {
-	width: 360px;
+	width: 340px;
 	font-family: 'Open Sans', sans-serif;
 	
 }
@@ -6665,7 +6666,7 @@ a.to-the-top > * {
 
 .panel-default {
 	border: none;
-	margin-left: 10px;
+	margin: 10px 10px;
 }
 
 .panel-heading {
@@ -6674,11 +6675,12 @@ a.to-the-top > * {
 	padding: 20px 0 0;
 }
 
-.panel-heading h2 {
+.panel-heading h3 {
 	font-weight: 800;
 	font-size: 1.8em;
 	text-align: left;
 	margin-left: 10px;
+	margin-bottom: 10px;
 }
 
 .panel-heading h2>span {
@@ -6695,6 +6697,12 @@ a.to-the-top > * {
 .wp-block-categories-list>.wp-block-categories {
 	margin-top: 0px;
 	margin-bottom: 0px;
+}
+/* End css module 9 (Categories) */
+.detail_bg {
+	background: url(http://fit.tdc.edu.vn/addons/default/themes/bootstrapThree/img/bg_pattern.png) repeat;
+	width: fit-content;
+	margin: 0 10px 0 20px;
 }
 
 .list-group .cat-item {
@@ -6724,6 +6732,14 @@ a.to-the-top > * {
     padding-right: 0.5em;
     position: relative;
     top: 0.15em;
+}
+/* End css module 9 (Categories) */
+
+/* Start css module 10 (Recent post) */
+.bg {
+	background: url(http://fit.tdc.edu.vn/addons/default/themes/bootstrapThree/img/bg_pattern.png) repeat;
+	width: fit-content;
+	margin: 0 10px 0 10px;
 }
 
 .list-group .wp-block-latest-posts>li {
@@ -6755,3 +6771,4 @@ a.to-the-top > * {
 	font-weight: normal;
 	font-family: 'Open Sans', sans-serif;
 }
+/* End css module 10 (recent post) */
