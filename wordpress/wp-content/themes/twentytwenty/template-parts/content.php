@@ -72,14 +72,15 @@
 			<div class="col-md-6 ditail-bg">
 				<div class="detail">
 					<div class="row title">
-						<div class="col-md-10 col-xs-9"><?php
-														if (is_singular()) {
-															the_title('<h4 class="entry-title">', '</h4>');
-														} else {
-															// this is a title in content
-															the_title('<h4><a href="' . esc_url(get_permalink()) . '">', '</a></h4>');
-														}
-														?>
+						<div class="col-md-10 col-xs-9">
+							<?php
+							if (is_singular()) {
+								the_title('<h4 class="entry-title">', '</h4>');
+							} else {
+								// this is a title in content
+								the_title('<h4><a href="' . esc_url(get_permalink()) . '">', '</a></h4>');
+							}
+							?>
 						</div>
 						<div class="col-md-2 col-xs-3">
 							<div class="headlinesdate">
@@ -139,7 +140,7 @@
 					<div class="divider"></div>
 				</div>
 			</div>
-			<!-- End -->
+			<!-- End hiển thị module 10 (Recent posts) -->
 		</div>
 		<!-- .post-inner -->
 	<?php } ?>

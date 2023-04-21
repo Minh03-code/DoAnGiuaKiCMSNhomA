@@ -6694,6 +6694,8 @@ a.to-the-top > * {
 }
 /* End css module 9 + module 10 (phần giống nhau) */
 
+
+/* Start css of module 10 */
 .bg {
 	background: url(http://fit.tdc.edu.vn/addons/default/themes/bootstrapThree/img/bg_pattern.png) repeat;
 	width: fit-content;
@@ -6729,4 +6731,4 @@ a.to-the-top > * {
 	font-weight: normal;
 	font-family: 'Open Sans', sans-serif;
 }
-/* End css module 10 (recent post) */
+/* Start css of module 10 */
