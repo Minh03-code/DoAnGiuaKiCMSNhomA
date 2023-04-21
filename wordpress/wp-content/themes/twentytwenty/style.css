@@ -6546,24 +6546,17 @@ a.to-the-top > * {
     align-items: center;
     font-size: 1.6rem !important;
 }
-
 #another__post-wrapper .another__post .headlinesdate .headlinesdm {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
-
 #another__post-wrapper .another__post .headlinesdate .headlinesday {
     border-bottom: 1px solid #000;
 }
-
-#another__post-wrapper .another__post .headlinesdate .headlinesmonth {
-}
-
 #another__post-wrapper .another__post .headlinesdate .headlinesyear {
     margin-left: 3px;
 }
-
 #another__post-wrapper .another__post .headlinestitle {
     flex: 10;
     display: flex;
@@ -6583,3 +6576,4 @@ a.to-the-top > * {
 #another__post-wrapper .another__post .headlinestitle a:hover {
     text-decoration: underline;
 }
+
