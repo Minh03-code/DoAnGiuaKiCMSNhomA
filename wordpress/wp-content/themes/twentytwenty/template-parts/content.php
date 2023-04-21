@@ -84,7 +84,7 @@
 					<div class="divider"></div>
 				</div>
 			</div>
-			<!-- End -->
+			<!-- End hiển thị module 9 -->
 			<div class="col-md-6 ditail-bg">
 				<div class="detail">
 					<div class="row title">
