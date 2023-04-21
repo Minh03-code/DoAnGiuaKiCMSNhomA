@@ -108,9 +108,24 @@
 	?>
 
 		<div class="row mg-top">
-			<div class="col-md-3">
-				This is module 9 (Show category)
+			<!--Start Hiển thị module 9 -->
+			<div class="col-md-3 detail_bg">
+				<div class="widget topworks_itdc">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3>Categories</h3>
+						</div>
+						<div class="crossedbg"></div>
+						<div class="panel-body">
+							<ul class="list-group">
+								<?php dynamic_sidebar('sidebar-9') ?>
+							</ul>
+						</div>
+					</div>
+					<div class="divider"></div>
+				</div>
 			</div>
+			<!-- End hiển thị module 9 -->
 			<div class="col-md-6 ditail-bg">
 				<div class="detail">
 					<div class="row title">
