@@ -6492,7 +6492,7 @@ section .section-title {
     padding-bottom: 6px;
     margin-bottom: 20px;
     color:#ffffff;
-	font-size: 2.5rem;
+	font-size: 3rem;
 }
 #footer a {
     color: #ffffff;
@@ -6548,6 +6548,42 @@ h6 .ts{
 	font-size: 2rem;
 }
 
+.wp-block-latest-comments__comment-meta>a{
+	font-weight: normal;
+	font-family: 'Open Sans', sans-serif;
+}
+.wp-block-latest-comments__comment-meta::before{
+	font-family: 'FontAwesome';
+	content: '\f101';
+	color: #fff;
+}
+
+
+
+.wp-block-categories>li>a{
+	font-weight: normal;
+	font-family: 'Open Sans', sans-serif;
+}
+.wp-block-categories>li::before{
+	font-family: 'FontAwesome';
+	content: '\f101';
+	color: #fff;
+}
+
+.wp-block-latest-posts>li>a{
+	font-weight: normal;
+	font-family: 'Open Sans', sans-serif;
+}
+.wp-block-latest-posts>li::before{
+	font-family: 'FontAwesome';
+	content: '\f101';
+	color: #fff;
+}
+.wp-block-latest-comments__comment-meta{
+	color: #fff;
+	font-weight: normal;
+	font-family: 'Open Sans', sans-serif;
+}
 @media (max-width:767px){
 	#footer h5 {
     padding-left: 0;
