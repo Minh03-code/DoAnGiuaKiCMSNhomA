@@ -59,7 +59,6 @@
 ?>
 
 	<?php
-	if (!is_search()) {
 
 
 
@@ -100,12 +99,7 @@
 
 		</div><!-- .post-inner -->
 	<?php
-	} else {
-
-		the_content(__('Continue reading', 'twentytwenty'));
-	}
-
-	?>
+	} ?>
 	<!-- End search result  -->
 <?php
 	// Nếu đây không phải trang home và không phải trang tìm kiếm sẽ đi vào trong đây
