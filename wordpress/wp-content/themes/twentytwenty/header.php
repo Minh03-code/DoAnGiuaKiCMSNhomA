@@ -124,7 +124,7 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="http://wordpress.local/admin/">Login</a></li>
-								<li><a href="<?php wp_logout_url(); ?>">Loguot</a></li>
+								<li><a href="<?php echo wp_logout_url(); ?>">Loguot</a></li>
 							</ul>
 						</li>
 						
