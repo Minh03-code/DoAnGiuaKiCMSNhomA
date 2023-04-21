@@ -6513,6 +6513,7 @@ a.to-the-top > * {
 		top: 0;
 	}
 }
+/* Css of Search Bar */
 .go_search{
 text-align: center;
 background: #fff;
@@ -6538,3 +6539,4 @@ display: inline-block;
 	width: 530px;
 	border: #fff;
 }
+/* Css of Search Bar */

@@ -103,14 +103,7 @@ get_header();
 		<div class="no-search-results-form section-inner thing">
 
 			<?php
-			
-			// get_search_form(
-			// 	array(
-			// 		'aria_label' => __( 'search again', 'twentytwenty' ),
-			// 	)
-			// );
-			// Form search edit
-			
+			//Form search bar
 			?>
 			<form action="http://wordpress.local/?s=" >
                <div class="go_search">
