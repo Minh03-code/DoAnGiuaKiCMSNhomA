@@ -21,6 +21,7 @@
 	?>
 <?php
 // Nếu đây là trang home sẽ đi vào trong đây
+// Start module 2 post
  if (is_home()) {
 	?>
 	<div class="container">
@@ -51,7 +52,9 @@
 			</div>
 		</div>
 	</div>
-<?php } ?>
+<?php } 
+// End module 2 post
+?>
 
 	<?php
 	if (!is_search()) {
