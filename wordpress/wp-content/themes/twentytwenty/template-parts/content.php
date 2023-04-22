@@ -20,10 +20,10 @@
 	// get_template_part( 'template-parts/entry-header' );
 	?>
 
-<?php
-// Nếu đây là trang home sẽ đi vào trong đây
-// Start module 2 post
- if (is_home()) {
+	<?php
+	// Nếu đây là trang home sẽ đi vào trong đây
+	// Start module 2 post
+	if (is_home()) {
 	?>
 		<div class="container">
 			<div class="content_box_m">
@@ -53,17 +53,17 @@
 				</div>
 			</div>
 		</div>
-	</div>
-<?php } 
-// End module 2 post
-?>
+		</div>
+	<?php }
+	// End module 2 post
+	?>
 
 	<?php
 
 
 
-	if (!is_search()) {
-		get_template_part('template-parts/featured-image');
+	if (!is_search() && !is_home()) {
+		// get_template_part('template-parts/featured-image');
 	}
 
 	?>
@@ -101,7 +101,7 @@
 	<?php
 	} ?>
 	<!-- End search result  -->
-<?php
+	<?php
 	// Nếu đây không phải trang home và không phải trang tìm kiếm sẽ đi vào trong đây
 	// Start module 6 detail
 	if (!is_home() && !is_search()) {
@@ -145,7 +145,9 @@
 									<div class="headlinesday"><?php echo get_the_date('d', get_the_ID()); ?></div>
 									<div class="headlinesmonth"><?php echo get_the_date('m', get_the_ID()); ?></div>
 								</div>
-								<div class="headlinesyear">'<?php echo get_the_date('y', get_the_ID()); ?></div>
+								<div class="headlinesyear">
+									'<?php echo get_the_date('y', get_the_ID()); ?>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -165,6 +167,19 @@
 							}
 							?>
 
+							<?php
+							the_post_thumbnail();
+
+							$caption = get_the_post_thumbnail_caption();
+
+							if ($caption) {
+							?>
+
+								<figcaption class="wp-caption-text"><?php echo wp_kses_post($caption); ?></figcaption>
+
+							<?php
+							}
+							?>
 						</div>
 					</div>
 					<div class="row maincontent">
@@ -200,7 +215,7 @@
 			<!-- End hiển thị module 10 (Recent posts) -->
 		</div>
 		<!-- .post-inner -->
-	<?php } 
+	<?php }
 	// End module 6 detail
 	?>
 	<div class="section-inner">
