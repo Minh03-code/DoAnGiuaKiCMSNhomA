@@ -168,13 +168,14 @@
 							?>
 
 							<?php
-							the_post_thumbnail();
+							
+							
 
 							$caption = get_the_post_thumbnail_caption();
-
-							if ($caption) {
+							if (get_the_post_thumbnail_url(get_the_ID())) {
+								the_post_thumbnail();
 							?>
-
+								
 								<figcaption class="wp-caption-text"><?php echo wp_kses_post($caption); ?></figcaption>
 
 							<?php
